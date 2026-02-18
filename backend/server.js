@@ -26,6 +26,25 @@ app.delete('/api/tasks/:id', (req, res) => {
     writeData(data);
     res.json({ success: true });
 });
+// Update task
+app.put('/api/tasks/:id', (req, res) => {
+    const data = readData();
+    const id = parseInt(req.params.id);
+    const idx = data.tasks.findIndex(t => t.id === id);
+    if (idx === -1) return res.status(404).json({ error: 'Not found' });
+    data.tasks[idx] = { ...data.tasks[idx], ...req.body, id };
+    writeData(data);
+    res.json(data.tasks[idx]);
+});
+
+// Get single task by id
+app.get('/api/tasks/:id', (req, res) => {
+    const data = readData();
+    const id = parseInt(req.params.id);
+    const task = data.tasks.find(t => t.id === id);
+    if (!task) return res.status(404).json({ error: 'Not found' });
+    res.json(task);
+});
 
 // API Cours (Matières)
 app.get('/api/courses', (req, res) => res.json(readData().courses));
