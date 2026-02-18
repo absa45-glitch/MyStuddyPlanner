@@ -1,0 +1,47 @@
+{
+  "tasks": [
+    {
+      "id": 1771290978379,
+      "titre": "projet ",
+      "matiere": "React",
+      "deadline": "2026-03-18",
+      "priorite": "Haute",
+      "status": "En cours"
+    },
+    {
+      "id": 1771291015536,
+      "titre": "tp ",
+      "matiere": "Base de donnees ",
+      "deadline": "2026-02-19",
+      "priorite": "Basse",
+      "status": "En cours"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1771290871725,
+      "nom": "React",
+      "prof": "Mme Ngom"
+    },
+    {
+      "id": 1771290897186,
+      "nom": "Base de donnees ",
+      "prof": "M. Mane"
+    },
+    {
+      "id": 1771290918575,
+      "nom": "Algorithme",
+      "prof": "M. Kaly"
+    },
+    {
+      "id": 1771290945342,
+      "nom": "Algebre lineaire",
+      "prof": "M. Kandy"
+    },
+    {
+      "id": 1771291698954,
+      "nom": "Reseau",
+      "prof": "M. Cisse"
+    }
+  ]
+}
